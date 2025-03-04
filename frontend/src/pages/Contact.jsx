@@ -29,7 +29,7 @@ const Contact = () => {
     e.preventDefault();
     sendEmail();
     console.log(user);
-    const response = await fetch(`http://localhost:5000/api/form/contact`, {
+    const response = await fetch(`https://institutional-sap.vercel.app/api/form/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const Contact = () => {
     
   };
   const sendEmail = async () => {
-    const res = await fetch(`http://localhost:5000/api/msg/msgmail`, {
+    const res = await fetch(`https://institutional-sap.vercel.app/api/msg/msgmail`, {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
