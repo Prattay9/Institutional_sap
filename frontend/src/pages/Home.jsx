@@ -30,7 +30,7 @@ const Home = () => {
     e.preventDefault();
     sendEmail();
     console.log(user);
-    const response = await fetch(`http://localhost:5000/api/auth/`, {
+    const response = await fetch(`https://institutional-sap.vercel.app/api/auth/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Home = () => {
     
   };
   const sendEmail = async () => {
-    const res = await fetch(`http://localhost:5000/api/mail/sendmail`, {
+    const res = await fetch(`https://institutional-sap.vercel.app/api/mail/sendmail`, {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
